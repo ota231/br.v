@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 function App() {
   return (
     <div className="App">
-      <header>
+      <header bg="lavender">
         <Navbar fixed="top" bg="light" expand="lg">
           <Container>
             <Navbar.Brand href="#home">Beyond Roe v. Wade</Navbar.Brand>
@@ -26,22 +26,23 @@ function App() {
         </Navbar>
       </header>
       <main>
-        <Row class="justify-content-center mb-5">
-          <h1 class="pt-4 display-4 mt-5 mb-3">Beyond Roe v. Wade</h1>
-          <p class="w-25 justify-content-center mx-auto">
-            With the recent overturning of Roe v. Wade, we aimed to visualize the ruling’s effects within the US, as well as how people are reacting on social media.
-          </p>
+        <Row class="justify-content-center">
+          <h1 class="pt-5 display-4 mt-5 mb-5">Beyond Roe v. Wade</h1>
         </Row>
-        <Button class="mb-5" variant="primary" size="sm">Our Process</Button>
+        <div>
+          <p class="w-50 display-6 fs-4 justify-content-center mx-auto mb-4">
+              With the recent overturning of Roe v. Wade, our project aims to visualize the ruling’s effects within the US, as well as how people are reacting on social media.
+          </p>
+          <Button class="mb-5" size="lg">Our Process</Button>
+        </div>
 
-        <div class="row featurette mt-5 pt-2">
-          <div class="col-md-7 order-md-2">
-            <p class="lead w-25 justify-content-center mx-auto">Using data from a variety of sources, we visualized just how well protected abortion rights are within each state.</p>
-            <Button class="justify-content-end" variant="primary" size="sm">See Full Interactive Map</Button>
+        <div class="row featurette my-5 pt-2 justify-content-center bg-secondary" color="black">
+          <div class="col-5 justify-content-center mx-auto">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto justify-content-center" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
           </div>
-          <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+          <div class="col-7 pt-5 mt-5">
+            <p class="lead w-50 justify-content-center mx-auto pt-5 mb-5">Using nation-wide data from a variety of sources, we visualized just how well protected abortion rights are within each state.</p>
+            <Button class="justify-content-end btn btn-info" bg="cyan" size="lg">See Full Interactive Map</Button>
           </div>
         </div>
       </main>

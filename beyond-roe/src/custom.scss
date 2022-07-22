@@ -1,0 +1,31 @@
+// import entire bootstrap library
+
+$secondary: #F1ECF2;
+$light: #E4D4EA;
+$info: #13727F;
+
+@use "sass:map";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// app custom colors
+$custom-colors: (
+  "lavender": #E4D4EA,
+  "bar": lime,
+);
+
+// bootstrap theme + utility merging
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
+button {
+  color: $cyan;
+}
+// additional non-bootstrap styles
+.blah {
+  color: purple;
+}
+
+
