@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
           <Container>
             <Navbar.Brand href="#home">Beyond Roe v. Wade</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Collapse id="basic-navbar-nav" class="justify-content-end">
               <Nav className="me-auto">
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#link">Map</Nav.Link>
@@ -46,6 +45,19 @@ function App() {
           </div>
         </div>
       </main>
+      <footer>
+        <div class="bg-primary mt-5">
+        <Row class="p-5 justify-content-start">
+          <p class="col justify-content-start text-left p-5">
+            <Navbar.Brand class="justify-content-start text-left">Beyond <br/> Roe v. Wade</Navbar.Brand>
+          </p>
+          <p class="col justify-content-end text-left p-5">
+            <Nav.Link href="#home">About Us</Nav.Link>
+            <Nav.Link href="#link">Contact</Nav.Link>
+          </p>
+        </Row>
+        </div>
+      </footer>
     </div>
   );
 }
